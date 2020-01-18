@@ -23,7 +23,9 @@ class ViewController: UIViewController {
         // add horizontal menu Cards
         let cardsHorizontalController = CardsHorizontalController()
 
+        self.addChild(cardsHorizontalController)
         self.view.addSubview(cardsHorizontalController.view)
+        self.didMove(toParent: cardsHorizontalController)
         
         cardsHorizontalController.view.translatesAutoresizingMaskIntoConstraints = false
         cardsHorizontalController.view.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 70.0).isActive = true
